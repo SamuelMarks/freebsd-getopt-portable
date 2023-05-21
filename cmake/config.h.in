@@ -1,0 +1,9 @@
+#ifndef getopt_freebsd_win_CONFIG_H
+#define getopt_freebsd_win_CONFIG_H
+
+#define getopt_freebsd_win_VERSION_MAJOR @getopt_freebsd_win_VERSION_MAJOR@
+#define getopt_freebsd_win_VERSION_MINOR @getopt_freebsd_win_VERSION_MINOR@
+#define getopt_freebsd_win_VERSION_PATCH @getopt_freebsd_win_VERSION_PATCH@
+#define getopt_freebsd_win_VERSION       "@getopt_freebsd_win_VERSION@"
+
+#endif /* getopt_freebsd_win_CONFIG_H */

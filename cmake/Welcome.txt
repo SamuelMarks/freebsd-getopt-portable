@@ -1,0 +1,3 @@
+`getopt` and `getopt_long` ported to MSVC from FreeBSD
+
+https://github.com/SamuelMarks/freebsd-getopt-for-windows
