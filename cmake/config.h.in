@@ -6,4 +6,8 @@
 #define getopt_freebsd_win_VERSION_PATCH @getopt_freebsd_win_VERSION_PATCH@
 #define getopt_freebsd_win_VERSION       "@getopt_freebsd_win_VERSION@"
 
-#endif /* getopt_freebsd_win_CONFIG_H */
+#ifndef _@TARGET_ARCH@_
+#define _@TARGET_ARCH@_
+#endif /* _@TARGET_ARCH@_ */
+
+#endif /* !getopt_freebsd_win_CONFIG_H */

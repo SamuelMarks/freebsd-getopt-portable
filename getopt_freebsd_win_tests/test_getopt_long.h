@@ -1,7 +1,6 @@
 #include "greatest.h"
 
 TEST x_getopt_long_should_succeed(void) {
-  char *s = NULL;
   PASS();
 }
 

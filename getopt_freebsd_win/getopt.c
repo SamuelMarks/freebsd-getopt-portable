@@ -34,7 +34,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef __CYGWIN__
+#include <cygwin/stdlib.h>
+#define _getprogname getprogname
+#else
 #include "getprogname.h"
+#endif
 
 int	opterr = 1,		/* if error message should be printed */
 	optind = 1,		/* index into parent argv vector */

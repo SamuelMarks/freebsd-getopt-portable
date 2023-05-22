@@ -44,7 +44,9 @@ else ()
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 endif ()
 
-# configure a header file to pass the version number only
+# configure a header file to pass the version number and arch only
+include("${CMAKE_SOURCE_DIR}/cmake/get_arch.cmake")
+get_arch()
 configure_file(
         "${CMAKE_CURRENT_SOURCE_DIR}/cmake/config.h.in"
         "${PROJECT_NAME}Config.h"

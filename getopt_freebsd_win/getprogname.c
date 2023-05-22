@@ -23,13 +23,24 @@
 
 #if !HAVE_GETPROGNAME
 
-#if defined(_WIN32)
-#define WIN32_LEAN_AND_MEAN
+/* avoid windows.h direct include */
+#if defined(_MSC_VER)
+#include "getopt_freebsd_winConfig.h"
+#include <Synchapi.h>
+#include <Libloaderapi.h>
+#elif defined(__MINGW32__) || defined(__MSYS__)
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x0600
 #endif /* _WIN32_WINNT */
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#endif
+
 #include <stdlib.h>
+
+#ifndef _MAX_FNAME
+#define _MAX_FNAME 256
+#endif /* !_MAX_FNAME */
 
 static INIT_ONCE getprogname_init_once = INIT_ONCE_STATIC_INIT;
 static TCHAR progname[_MAX_FNAME];
@@ -68,5 +79,5 @@ _getprogname(void)
 			NULL);
 	return progname;
 }
-#endif /* _WIN32 */
+
 #endif /* HAVE_GETPROGNAME */

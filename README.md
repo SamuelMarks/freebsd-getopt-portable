@@ -8,17 +8,18 @@ getopt_freebsd_win
 This adds them to all targets, tested on:
 
 - **Windows**
-  - MSVC 2005
-  - MSVC 2022 (should support all other versions also)
-  - MinGW
+
+  - MSVC 2022* (tested on x86 and x64)
+  - MinGW (tested on x86 and x64)
   - Cygwin
-  - Open Watcom 2.0 (including **DOS** target)
+
+*should support all versions down to ~2010 also
 
 ---
 
 ## License
 
-Licensed under either of BSD 2 clause ([LICENSE-BSD-2](LICENSE-BSD-2) or <https://opensource.org/license/bsd-2-clause>)
+Licensed under BSD 2 clause ([LICENSE-BSD-2](LICENSE-BSD-2) or <https://opensource.org/license/bsd-2-clause>)
 
 Except for getprogname which is Apache-2.0 from https://github.com/apple/swift-corelibs-libdispatch
 

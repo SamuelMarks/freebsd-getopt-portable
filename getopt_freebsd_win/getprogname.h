@@ -31,7 +31,7 @@
 extern const char *__progname;
 #endif /* __ANDROID */
 
-#if defined(_WIN32)
+#if defined(_MSC_VER) || defined(__MINGW32__) || defined(__MSYS__)
 GETOPT_FREEBSD_WIN_EXPORT
 const char *_getprogname(void);
 #else
@@ -47,7 +47,7 @@ getprogname(void)
 #   error getprogname(3) is not available on this platform
 # endif
 }
-#endif /* _WIN32 */
+#endif /* defined(_MSC_VER) || defined(__MINGW32__) || defined(__MSYS__) */
 #endif /* HAVE_GETPROGNAME */
 
 #endif /* __DISPATCH_SHIMS_GETPROGNAME__ */
