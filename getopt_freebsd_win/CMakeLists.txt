@@ -3,8 +3,16 @@ get_filename_component(LIBRARY_NAME "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
 set(Header_Files "getopt.h")
 source_group("Header Files" FILES "${Header_Files}")
 
+if (MSVC)
+    list(APPEND Header_Files "getprogname.h")
+endif (MSVC)
+
 set(Source_Files "getopt.c" "getopt_long.c")
-source_group("Source Files" FILES "${Header_Files}")
+source_group("Source Files" FILES "${Source_Files}")
+
+if (MSVC)
+    list(APPEND Source_Files "getprogname.c")
+endif (MSVC)
 
 add_library("${LIBRARY_NAME}" "${Header_Files}" "${Source_Files}")
 

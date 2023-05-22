@@ -1,6 +1,6 @@
 getopt_freebsd_win
 ==================
-[![License](https://img.shields.io/badge/license-BSD-3-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![C89](https://img.shields.io/badge/C-89-blue)](https://en.wikipedia.org/wiki/C89_(C_version))
 
 `getopt` and `getopt_long` are nice. But MSVC doesn't have them.
@@ -19,6 +19,8 @@ This adds them to all targets, tested on:
 ## License
 
 Licensed under either of BSD 2 clause ([LICENSE-BSD-2](LICENSE-BSD-2) or <https://opensource.org/license/bsd-2-clause>)
+
+Except for getprogname which is Apache-2.0 from https://github.com/apple/swift-corelibs-libdispatch
 
 ### Contribution
 

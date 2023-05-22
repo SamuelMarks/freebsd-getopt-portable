@@ -54,6 +54,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef warnx
+#include <stdio.h>
+#define warnx printf
+#endif /* !warnx */
+
 #define GNU_COMPATIBLE		/* Be more compatible, configure's use us! */
 
 #define PRINT_ERROR	((opterr) && (*options != ':'))
@@ -354,8 +359,18 @@ getopt_internal(int nargc, char * const *nargv, const char *options,
 	 * Disable GNU extensions if POSIXLY_CORRECT is set or options
 	 * string begins with a '+'.
 	 */
-	if (posixly_correct == -1 || optreset)
+	if (posixly_correct == -1 || optreset) {
+#ifdef _MSC_VER
+        char* buf = NULL;
+        size_t sz = 0;
+        if (_dupenv_s(&buf, &sz, "POSIXLY_CORRECT") == 0 && buf != NULL) {
+            posixly_correct = 1;
+            free(buf);
+        } else posixly_correct = 0;
+#else
 		posixly_correct = (getenv("POSIXLY_CORRECT") != NULL);
+#endif /* _MSC_VER */
+    }
 	if (*options == '-')
 		flags |= FLAG_ALLARGS;
 	else if (posixly_correct || *options == '+')

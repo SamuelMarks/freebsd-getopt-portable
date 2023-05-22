@@ -35,6 +35,8 @@
 #ifndef _GETOPT_H_
 #define _GETOPT_H_
 
+#include "getopt_freebsd_win_export.h"
+
 /*
  * GNU-like getopt_long()/getopt_long_only() with 4.4BSD optreset extension.
  * getopt() is declared here too for GNU programs.
@@ -58,20 +60,20 @@ struct option {
 };
 
 /* __BEGIN_DECLS */
-int	getopt_long(int, char * const *, const char *,
+GETOPT_FREEBSD_WIN_EXPORT int	getopt_long(int, char * const *, const char *,
 	const struct option *, int *);
-int	getopt_long_only(int, char * const *, const char *,
+GETOPT_FREEBSD_WIN_EXPORT int	getopt_long_only(int, char * const *, const char *,
 	const struct option *, int *);
 #ifndef _GETOPT_DECLARED
 #define	_GETOPT_DECLARED
-int	 getopt(int, char * const [], const char *);
+GETOPT_FREEBSD_WIN_EXPORT int	 getopt(int, char * const [], const char *);
 
-extern char *optarg;			/* getopt(3) external variables */
-extern int optind, opterr, optopt;
+GETOPT_FREEBSD_WIN_EXPORT extern char *optarg;			/* getopt(3) external variables */
+GETOPT_FREEBSD_WIN_EXPORT extern int optind, opterr, optopt;
 #endif
 #ifndef _OPTRESET_DECLARED
 #define	_OPTRESET_DECLARED
-extern int optreset;			/* getopt(3) external variable */
+GETOPT_FREEBSD_WIN_EXPORT extern int optreset;			/* getopt(3) external variable */
 #endif
 
 #endif /* !_GETOPT_H_ */
