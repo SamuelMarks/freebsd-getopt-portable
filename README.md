@@ -5,7 +5,11 @@ getopt_freebsd_win
 
 `getopt` and `getopt_long` are nice. But MSVC doesn't have them.
 
-This adds them to all targets, tested on:
+BSD-2-Clause: This ports their implementation to Windows from FreeBSD's source tree at [freebsd/freebsd-src@`046d8d8`](https://github.com/freebsd/freebsd-src/commit/046d8d89ed1956944b12ec4f0580c30bc202bbfb).
+
+Apache-2.0: On non-Cygwin Windows this uses `getprogname` at [apple/swift-corelibs-libdispatch@`7fb9d5c`](https://github.com/apple/swift-corelibs-libdispatch/commit/7fb9d5ceea562d60fe34ec55b6b165ae5aca38eb)
+
+Support includes:
 
 - **Windows**
 
@@ -13,7 +17,9 @@ This adds them to all targets, tested on:
   - MinGW (tested on x86 and x64)
   - Cygwin
 
-*should support all versions down to ~2010 also
+*should support all versions down to ~2010 also.
+
+PS: On Linux, BSD, macOS, SunOS and others with `unistd.h` depending on this library should still work; this just becomes a header-only lib with `#include <unistd.h>`.
 
 ---
 

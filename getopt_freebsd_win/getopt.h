@@ -32,7 +32,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _GETOPT_H_
+#if (defined(__CYGWIN__) || defined(__MINGW32__) || defined(__MSYS__) || defined(_MSC_VER)) && !defined(_GETOPT_H_)
 #define _GETOPT_H_
 
 #include "getopt_freebsd_win_export.h"
@@ -76,4 +76,8 @@ GETOPT_FREEBSD_WIN_EXPORT extern int optind, opterr, optopt;
 GETOPT_FREEBSD_WIN_EXPORT extern int optreset;			/* getopt(3) external variable */
 #endif
 
-#endif /* !_GETOPT_H_ */
+#else
+
+#include <unistd.h>
+
+#endif /* (defined(__CYGWIN__) || defined(__MINGW32__) || defined(__MSYS__) || defined(_MSC_VER)) && !defined(_GETOPT_H_) */
