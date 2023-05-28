@@ -1,9 +1,11 @@
-getopt_freebsd_win
-==================
+getopt_freebsd
+==============
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![C89](https://img.shields.io/badge/C-89-blue)](https://en.wikipedia.org/wiki/C89_(C_version))
 
 `getopt` and `getopt_long` are nice. But MSVC doesn't have them.
+
+Documentation: https://man.freebsd.org/cgi/man.cgi?getopt_long(3)
 
 BSD-2-Clause: This ports their implementation to Windows from FreeBSD's source tree at [freebsd/freebsd-src@`046d8d8`](https://github.com/freebsd/freebsd-src/commit/046d8d89ed1956944b12ec4f0580c30bc202bbfb).
 

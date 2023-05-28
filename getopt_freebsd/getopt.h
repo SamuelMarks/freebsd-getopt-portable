@@ -35,7 +35,7 @@
 #if (defined(__CYGWIN__) || defined(__MINGW32__) || defined(__MSYS__) || defined(_MSC_VER)) && !defined(_GETOPT_H_)
 #define _GETOPT_H_
 
-#include "getopt_freebsd_win_export.h"
+#include "getopt_freebsd_export.h"
 
 /*
  * GNU-like getopt_long()/getopt_long_only() with 4.4BSD optreset extension.

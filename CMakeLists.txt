@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
-project(getopt_freebsd_win VERSION 0.0.1 LANGUAGES C)
+project(getopt_freebsd VERSION 0.0.1 LANGUAGES C)
 
 set(CMAKE_C_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
@@ -13,11 +13,11 @@ if (NOT DEFINED MSVC_VERSION
 elseif ((MSVC_VERSION STRLESS_EQUAL "1900"
          OR CMAKE_C_COMPILER_ID STREQUAL "OpenWatcom"
          OR CYGWIN)
-        AND NOT EXISTS "${CMAKE_BINARY_DIR}/getopt_freebsd_win_export.h")
-    file(COPY "${CMAKE_SOURCE_DIR}/getopt_freebsd_win/getopt_freebsd_win_export_pregen.h"
+        AND NOT EXISTS "${CMAKE_BINARY_DIR}/getopt_freebsd_export.h")
+    file(COPY "${CMAKE_SOURCE_DIR}/getopt_freebsd/getopt_freebsd_export_pregen.h"
             DESTINATION "${CMAKE_BINARY_DIR}")
-    file(RENAME "${CMAKE_BINARY_DIR}/getopt_freebsd_win_export_pregen.h"
-            "${CMAKE_BINARY_DIR}/getopt_freebsd_win_export.h")
+    file(RENAME "${CMAKE_BINARY_DIR}/getopt_freebsd_export_pregen.h"
+            "${CMAKE_BINARY_DIR}/getopt_freebsd_export.h")
 endif ()
 if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.15")
     # add compiler warning flags just when building this project via

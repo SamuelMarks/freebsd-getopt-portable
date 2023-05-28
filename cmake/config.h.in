@@ -1,13 +1,13 @@
-#ifndef getopt_freebsd_win_CONFIG_H
-#define getopt_freebsd_win_CONFIG_H
+#ifndef getopt_freebsd_CONFIG_H
+#define getopt_freebsd_CONFIG_H
 
-#define getopt_freebsd_win_VERSION_MAJOR @getopt_freebsd_win_VERSION_MAJOR@
-#define getopt_freebsd_win_VERSION_MINOR @getopt_freebsd_win_VERSION_MINOR@
-#define getopt_freebsd_win_VERSION_PATCH @getopt_freebsd_win_VERSION_PATCH@
-#define getopt_freebsd_win_VERSION       "@getopt_freebsd_win_VERSION@"
+#define getopt_freebsd_VERSION_MAJOR @getopt_freebsd_VERSION_MAJOR@
+#define getopt_freebsd_VERSION_MINOR @getopt_freebsd_VERSION_MINOR@
+#define getopt_freebsd_VERSION_PATCH @getopt_freebsd_VERSION_PATCH@
+#define getopt_freebsd_VERSION       "@getopt_freebsd_VERSION@"
 
 #ifndef _@TARGET_ARCH@_
 #define _@TARGET_ARCH@_
 #endif /* _@TARGET_ARCH@_ */
 
-#endif /* !getopt_freebsd_win_CONFIG_H */
+#endif /* !getopt_freebsd_CONFIG_H */

@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.11)
-project(getopt_freebsd_win_tests
+project(getopt_freebsd_tests
         VERSION "0.0.1"
         LANGUAGES C)
 
-set(HOMEPAGE_URL "https://github.com/offscale/getopt_freebsd_win")
-set(DESCRIPTION "Tests for getopt_freebsd_win")
+set(HOMEPAGE_URL "https://github.com/offscale/getopt_freebsd")
+set(DESCRIPTION "Tests for getopt_freebsd")
 set(CMAKE_C_STANDARD 90)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -41,9 +41,9 @@ source_group("Source Files" FILES "${Source_Files}")
 
 add_executable("${EXEC_NAME}" "${Header_Files}" "${Source_Files}")
 
-target_link_libraries("${EXEC_NAME}" PRIVATE "getopt_freebsd_win")
+target_link_libraries("${EXEC_NAME}" PRIVATE "getopt_freebsd")
 if (NOT CMAKE_C_COMPILER_ID STREQUAL "OpenWatcom")
-    target_link_libraries("${EXEC_NAME}" PRIVATE "getopt_freebsd_win_compiler_flags")
+    target_link_libraries("${EXEC_NAME}" PRIVATE "getopt_freebsd_compiler_flags")
 endif (NOT CMAKE_C_COMPILER_ID STREQUAL "OpenWatcom")
 target_include_directories(
         "${EXEC_NAME}"

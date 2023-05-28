@@ -25,7 +25,7 @@
 
 /* avoid windows.h direct include */
 #if defined(_MSC_VER)
-#include "getopt_freebsd_winConfig.h"
+#include "getopt_freebsdConfig.h"
 #include <Synchapi.h>
 #include <Libloaderapi.h>
 #elif defined(__MINGW32__) || defined(__MSYS__)

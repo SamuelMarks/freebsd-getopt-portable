@@ -20,7 +20,7 @@
  */
 
 #include <errno.h>
-#include "getopt_freebsd_win_export.h"
+#include "getopt_freebsd_export.h"
 
 #ifndef __DISPATCH_SHIMS_GETPROGNAME__
 #define __DISPATCH_SHIMS_GETPROGNAME__
