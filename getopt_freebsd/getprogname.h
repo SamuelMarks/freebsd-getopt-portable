@@ -32,7 +32,7 @@ extern const char *__progname;
 #endif /* __ANDROID */
 
 #if defined(_MSC_VER) || defined(__MINGW32__) || defined(__MSYS__)
-GETOPT_FREEBSD_WIN_EXPORT
+GETOPT_FREEBSD_EXPORT
 const char *_getprogname(void);
 #else
 

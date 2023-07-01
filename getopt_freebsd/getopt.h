@@ -60,20 +60,20 @@ struct option {
 };
 
 /* __BEGIN_DECLS */
-GETOPT_FREEBSD_WIN_EXPORT int	getopt_long(int, char * const *, const char *,
+GETOPT_FREEBSD_EXPORT int	getopt_long(int, char * const *, const char *,
 	const struct option *, int *);
-GETOPT_FREEBSD_WIN_EXPORT int	getopt_long_only(int, char * const *, const char *,
+GETOPT_FREEBSD_EXPORT int	getopt_long_only(int, char * const *, const char *,
 	const struct option *, int *);
 #ifndef _GETOPT_DECLARED
 #define	_GETOPT_DECLARED
-GETOPT_FREEBSD_WIN_EXPORT int	 getopt(int, char * const [], const char *);
+GETOPT_FREEBSD_EXPORT int	 getopt(int, char * const [], const char *);
 
-GETOPT_FREEBSD_WIN_EXPORT extern char *optarg;			/* getopt(3) external variables */
-GETOPT_FREEBSD_WIN_EXPORT extern int optind, opterr, optopt;
+GETOPT_FREEBSD_EXPORT extern char *optarg;			/* getopt(3) external variables */
+GETOPT_FREEBSD_EXPORT extern int optind, opterr, optopt;
 #endif
 #ifndef _OPTRESET_DECLARED
 #define	_OPTRESET_DECLARED
-GETOPT_FREEBSD_WIN_EXPORT extern int optreset;			/* getopt(3) external variable */
+GETOPT_FREEBSD_EXPORT extern int optreset;			/* getopt(3) external variable */
 #endif
 
 #else
